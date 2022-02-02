@@ -4,10 +4,10 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Book This Package</h2>
+            <h2>Create New Visitor</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('packages.index') }}"> Back</a>
+            <a class="btn btn-primary" href="{{ route('visitors.index') }}"> Back</a>
         </div>
     </div>
 </div>
@@ -23,7 +23,7 @@
     </div>
 @endif
      
-<form action="{{ route('packages.store') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('visitors.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
     
      <div class="row">
@@ -35,26 +35,20 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Details:</strong>
-                <textarea class="form-control" style="height:150px" name="details" placeholder="Details"></textarea>
+                <strong>Address:</strong>
+                <textarea class="form-control" style="height:150px" name="address" placeholder="Address"></textarea>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Price:</strong>
-                <textarea class="form-control"  name="price" placeholder="Price"></textarea>
+                <strong>Primarycontact:</strong>
+                <textarea class="form-control"  name="primarycontact" placeholder="Priarycontact"></textarea>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Availability:</strong>
-                <textarea class="form-control"  name="availability" placeholder="Availability"></textarea>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Duration:</strong>
-                <textarea class="form-control"  name="duration" placeholder="Duration"></textarea>
+                <strong>Secondarycontact:</strong>
+                <textarea class="form-control"  name="secondarycontact" placeholder="Secondarycontact"></textarea>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -73,6 +67,16 @@
                 <select class="form-control"  name="vehicles_id" placeholder="Vehicles_id">
                 @foreach($lists as $vehicles)
                     <option value="{{$vehicles->id}}" >{{$vehicles->vehicleno}}</option>
+                @endforeach
+                </select>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Packages_id:</strong>
+                <select class="form-control"  name="packages_id" placeholder="Packages_id">
+                @foreach($datas as $packages)
+                    <option value="{{$packages->id}}" >{{$packages->name}}</option>
                 @endforeach
                 </select>
             </div>

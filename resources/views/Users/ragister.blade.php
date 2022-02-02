@@ -41,12 +41,18 @@
         </div><div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Password:</strong>
-                <textarea class="form-control" style="height:50px" name="password" placeholder="Password"></textarea>
+                <input type="password" class="form-control" style="height:50px" name="password" placeholder="Password">
             </div>
             </div><div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Usertypes_id:</strong>
-                <textarea class="form-control" style="height:50px" name="Usertypes_id" placeholder="Usertypes_id"></textarea>
+                <select class="form-control" name="user_types_id" placeholder="Choose User">
+                
+                @foreach($types as $usertypes)
+                    <option value="{{$usertypes->id}}" >{{$usertypes->name}}</option>
+                @endforeach
+                
+                </select>
             </div>
         
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

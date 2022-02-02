@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Vehicle;
+use App\Models\Guide;
 use App\Models\Package;
 use Illuminate\Http\Request;
 
@@ -27,7 +28,9 @@ class PackageController extends Controller
      */
     public function create()
     {
-        return view('packages.create'); //
+        $ids=Guide::get();
+        $lists=Vehicle::get();
+        return view('packages.create',compact('lists','ids'));
     }
 
     /**

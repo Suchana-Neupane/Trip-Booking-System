@@ -19,9 +19,9 @@ class CreateVehiclesTable extends Migration
             $table->string('vehicletypes');
             $table->string('availability');
             $table->string('capacity');
-            $table->integer('guides_id')->unsigned();
+            $table->UnsignedBigInteger('guides_id');
             $table->timestamps();
-
+           
             $table->foreign('guides_id')->references('id')->on('guides')->onDelete('cascade');
         });
     }

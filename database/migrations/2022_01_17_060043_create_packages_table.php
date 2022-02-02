@@ -18,11 +18,15 @@ class CreatePackagesTable extends Migration
             $table->string('name');
             $table->string('details');
             $table->integer('price');
-            $table->string('availabilty');
+            $table->string('availability');
             $table->string('duration');
-            $table->unsignedInteger('guides_id');
-            $table->unsignedInteger('vehicles_id');
+            $table->unsignedBigInteger('guides_id');
+            $table->unsignedBigInteger('vehicles_id');
             $table->timestamps();
+
+            $table->foreign('guides_id')->references('id')->on('guides')->onDelete('cascade');
+            $table->foreign('vehicles_id')->references('id')->on('vehicles')->onDelete('cascade');
+            
         });
     }
 

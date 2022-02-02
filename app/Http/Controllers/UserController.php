@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User_type;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -28,7 +28,9 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('users.ragister');  //
+        $types=User_type::get();
+       
+        return view('users.ragister',compact('types'));  //
     }
 
     /**
@@ -43,7 +45,7 @@ class UserController extends Controller
             'name' => 'required',
             'email' => 'required',
             'password' => 'required',
-            'UserType_id' => ''
+            'user_types_id' => ''
         ]);
     
         User::create($request->all());
@@ -88,7 +90,7 @@ class UserController extends Controller
             'name' => 'required',
             'email' => 'required',
             'password' => 'required',
-            'UserType_id' => ''
+            'user_types_id' => ''
         ]);
     
         User::update($request->all());

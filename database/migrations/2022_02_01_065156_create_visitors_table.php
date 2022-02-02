@@ -13,16 +13,21 @@ class CreateVisitorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('visiters', function (Blueprint $table) {
+        Schema::create('visitors', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('address');
             $table->string('primarycontact');
             $table->string('secondarycontact');
-            $table->unsignedInteger('guides_id');
-            $table->unsignedInteger('vechicles_id');
-            $table->unsignedInteger('packages_id');
+            $table->unsignedBigInteger('guides_id');
+            $table->unsignedBigInteger('vehicles_id');
+            $table->unsignedBigInteger('packages_id');
             $table->timestamps();
+
+            $table->foreign('guides_id')->references('id')->on('guides')->onDelete('cascade');
+            $table->foreign('vehicles_id')->references('id')->on('vehicles')->onDelete('cascade');
+            $table->foreign('packages_id')->references('id')->on('packages')->onDelete('cascade');
+            
         });
     }
 
@@ -33,6 +38,6 @@ class CreateVisitorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('visiters');
+        Schema::dropIfExists('visitors');
     }
 }

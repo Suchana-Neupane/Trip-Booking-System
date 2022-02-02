@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Guide;
+use App\Models\Vehicle;
+use App\Models\Package;
 use App\Models\Visitor;
 use Illuminate\Http\Request;
 
@@ -26,7 +28,10 @@ class VisitorController extends Controller
      */
     public function create()
     {
-       return view('visitors.create');
+        $ids=Guide::get();
+        $lists=Vehicle::get(); 
+        $datas=Vehicle::get();
+       return view('visitors.create',compact('ids','lists','datas'));
     }
 
     /**
@@ -46,8 +51,8 @@ class VisitorController extends Controller
             'vehicles_id'=>'required',
             'packages_id'=>'required'
         ]);
-        Visitors::create($request->all());
-        return redirect()->route('vehicles.index') 
+        Visitor::create($request->all());
+        return redirect()->route('visitors.index') 
                          ->with('success','Visitor added successfully.');
     }
 
@@ -59,7 +64,7 @@ class VisitorController extends Controller
      */
     public function show(Visitor $visitor)
     {
-        return view('visitors.show',comapct('visitor'));
+        return view('visitors.show',compact('visitor'));
     }
 
     /**
@@ -70,7 +75,11 @@ class VisitorController extends Controller
      */
     public function edit(Visitor $visitor)
     {
-        return view('visitors.edit',comapct('visitor')); //
+        
+        $ids=Guide::get();
+        $lists=Vehicle::get(); 
+        $datas=Vehicle::get();
+        return view('visitors.edit',compact('visitor','ids','lists','datas')); //
     }
 
     /**
@@ -91,8 +100,8 @@ class VisitorController extends Controller
             'vehicles_id'=>'required',
             'packages_id'=>'required'
         ]);
-        Visitors::update($request->all());
-        return redirect()->route('vehicles.index') 
+        Visitor::update($request->all());
+        return redirect()->route('visitors.index') 
                          ->with('success','Visitor is added successfully.');
     }
 

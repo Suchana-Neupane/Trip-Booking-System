@@ -61,7 +61,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Guides_id:</strong>
-                    <textarea class="form-control" name="price" placeholder="guides_id">{{ $package->guides_id }}</textarea>
+                    <textarea class="form-control" name="guides_id" placeholder="guides_id">{{ $package->guides_id }}</textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">

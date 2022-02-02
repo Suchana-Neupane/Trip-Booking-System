@@ -43,7 +43,7 @@ class VehicleController extends Controller
             'capacity' =>'required',
             'guides_id' =>'required' 
         ]);
-        Vehicle::create($input);
+        Vehicle::create($request->all());
 
         return redirect()->route('vehicles.index') 
                         ->with('success','Vehicle added successfully.');
