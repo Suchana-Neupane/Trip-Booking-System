@@ -28,9 +28,9 @@
     
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
+            <div class="form-group ">
                 <strong>Vehicleno:</strong>
-                <input type="text" name="vehicleno" class="form-control" placeholder="vehicleno">
+                <input type="number" name="vehicleno" class="form-control" placeholder="vehicleno">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -53,8 +53,12 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>guides_id:</strong>
-                <input type ="text" class="form-control" name="guides_id" placeholder="guides_id">
+                <strong>Guides:</strong>
+                <select type ="text" class="form-control" name="guides_id" placeholder="guides_id">
+                @foreach($ids as $guides)
+                    <option value="{{$guides->id}}" >{{$guides->name}}</option>
+                @endforeach
+                </select>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

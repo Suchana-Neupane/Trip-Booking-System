@@ -36,25 +36,25 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Email:</strong>
-                <input type="text" class="form-control" name="email" placeholder="email">
+                <input type="email" class="form-control" name="email" placeholder="email">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>password:</strong>
-                <input type="text" class="form-control" name="password" placeholder="password">
+                <input type="password" class="form-control" name="password" placeholder="password">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>primarycontact:</strong>
-                <input type="text" class="form-control" name="primarycontact" placeholder="primarycontact">
+                <input type="number" class="form-control" name="primarycontact" placeholder="primarycontact">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>seconarycontact:</strong>
-                <input type ="text" class="form-control" name="secondarycontact" placeholder="secondarycontact">
+                <input type ="number" class="form-control" name="secondarycontact" placeholder="secondarycontact">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

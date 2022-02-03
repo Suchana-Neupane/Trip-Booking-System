@@ -31,7 +31,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Vehicleno:</strong>
-                    <input type="text" name="vehicleno" value="{{ $vehicle->vehicleno }}" class="form-control" placeholder="Vehicleno">
+                    <input type="number" name="vehicleno" value="{{ $vehicle->vehicleno }}" class="form-control" placeholder="Vehicleno">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -54,8 +54,12 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>guides_id:</strong>
-                    <textarea class="form-control" name="guides_id" placeholder="guides_id">{{ $vehicle->guides_id }}</textarea>
+                    <strong>Guides:</strong>
+                    <select class="form-control" name="guides_id" placeholder="guides_id">{{ $vehicle->guides_id }}>
+                    @foreach($ids as $guides)
+                    <option value="{{$guides->id}}" >{{$guides->name}}</option>
+                @endforeach
+                </select>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

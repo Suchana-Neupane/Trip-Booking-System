@@ -59,7 +59,7 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Guides_id:</strong>
+                <strong>Guides:</strong>
                 <select class="form-control"  name="guides_id" placeholder="Guides_id">
                 @foreach($ids as $guides)
                     <option value="{{$guides->id}}" >{{$guides->name}}</option>
@@ -69,7 +69,7 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Vehicles_id:</strong>
+                <strong>Vehicles:</strong>
                 <select class="form-control"  name="vehicles_id" placeholder="Vehicles_id">
                 @foreach($lists as $vehicles)
                     <option value="{{$vehicles->id}}" >{{$vehicles->vehicleno}}</option>

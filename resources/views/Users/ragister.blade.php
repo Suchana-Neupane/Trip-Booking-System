@@ -30,23 +30,24 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Name:</strong>
-                <input type="text" name="name" class="form-control" placeholder="Name">
+                <input type="text" name="name" class="form-control"  placeholder="Name">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Email:</strong>
-                <textarea class="form-control"style="height:50px" name="email" placeholder="Email"></textarea>
+              <strong>Email:</strong>  
+             <input type="email" class="form-control"  name="email" placeholder="Email">
             </div>
-        </div><div class="col-xs-12 col-sm-12 col-md-12">
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Password:</strong>
-                <input type="password" class="form-control" style="height:50px" name="password" placeholder="Password">
+                <input type="password" class="form-control"  name="password" placeholder="Password">
             </div>
             </div><div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Usertypes_id:</strong>
-                <select class="form-control" name="user_types_id" placeholder="Choose User">
+                <strong>Usertypes:</strong>
+                <select class="form-control" name="user_types_id"  placeholder="Choose User">
                 
                 @foreach($types as $usertypes)
                     <option value="{{$usertypes->id}}" >{{$usertypes->name}}</option>
@@ -55,7 +56,7 @@
                 </select>
             </div>
         
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+        <div class="col-xs-12 col-sm-12 col-md-12 text-left">
                 <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </div>

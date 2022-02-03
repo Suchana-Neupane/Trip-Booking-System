@@ -37,32 +37,32 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Email:</strong>
-                    <textarea class="form-control" style="height:150px" name="email" placeholder="Email">{{ $guide->email }}</textarea>
+                    <input type="email" class="form-control"  name="email" placeholder="Email"{{ $guide->email }}>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>password:</strong>
-                    <textarea class="form-control" style="height:150px" name="password" placeholder="Password">{{ $guide->password }}</textarea>
+                    <input type="password" class="form-control"  name="password" placeholder="Password"{{ $guide->password }}>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>primarycontact:</strong>
-                    <textarea class="form-control" style="height:150px" name="primarycontact" placeholder="primarycontact">{{ $guide->primarycontact }}</textarea>
+                    <input type="number" class="form-control"  name="primarycontact" placeholder="primarycontact"{{ $guide->primarycontact }}>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>secondarycontact:</strong>
-                    <textarea class="form-control" style="height:150px" name="secondarycontact" placeholder="secondarycontact">{{ $guide->secondarycontact }}</textarea>
+                    <input type="number" class="form-control" name="secondarycontact" placeholder="secondarycontact"{{ $guide->secondarycontact }}>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Image:</strong>
                     <input type="file" name="image" class="form-control" placeholder="image">
-                    <img src="/image/{{ $guide->image }}" width="300px">
+                    
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
