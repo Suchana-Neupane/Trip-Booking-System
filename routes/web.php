@@ -32,3 +32,6 @@ Route::resource('/packages', App\Http\Controllers\PackageController::class );
 
 //Routes of visitors
 Route::resource('/visitors',App\Http\Controllers\VisitorController::class);
+
+//Routes of bookings
+Route::resource('/bookings',App\Http\Controllers\BookingController::class);
