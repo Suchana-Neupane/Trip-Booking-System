@@ -39,8 +39,8 @@
             <td>{{ $package->price }}</td>
             <td>{{ $package->availability }}</td>
             <td>{{ $package->duration }}</td>
-            <td>{{ $package->guides_id }}</td>
-            <td>{{ $package->vehicles_id }}</td>
+            <td>{{ $package->guides->name }},{{ $package->guides->primarycontact }}</td>
+            <td>{{ $package->vehicles->vehicleno }}</td>
             <td>
                 <form action="{{ route('packages.destroy',$package->id) }}" method="POST">
      

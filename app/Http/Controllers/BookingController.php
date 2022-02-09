@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Package;
 use App\Models\Booking;
 use Illuminate\Http\Request;
 
@@ -14,7 +14,7 @@ class BookingController extends Controller
      */
     public function index()
     {
-        $bookings=Booking ::latest()->get();
+        $bookings=Package::get();
         return view('bookings.index', compact('bookings'));
     }
 
@@ -36,12 +36,12 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
-        $request -> validate[(
-           'guides_id' => 'required',
-           'vehicles_id'=>'required',
-           'packages_id'=>'required',
-           'visitors_id'=>'required'
-        )];
+        // $request -> validate[(
+        //    'guides_id' => 'required',
+        //    'vehicles_id'=>'required',
+        //    'packages_id'=>'required',
+        //    'visitors_id'=>'required'
+        // )];
 
         Booking::create($request->all());
      
@@ -55,9 +55,11 @@ class BookingController extends Controller
      * @param  \App\Models\Booking  $booking
      * @return \Illuminate\Http\Response
      */
-    public function show(Booking $booking)
+    public function show(Booking $booking,$id)
     {
-        //
+        dd($id);
+        $bookings=Package::get();
+        return view('bookings.show',compact('bookings'));  
     }
 
     /**

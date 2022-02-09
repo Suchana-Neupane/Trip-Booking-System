@@ -34,7 +34,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Usertypes:</strong>
-                {{ $user->user_types_id }}
+                {{ $user->usertypes->name }}
             </div>
         </div>
     </div>
