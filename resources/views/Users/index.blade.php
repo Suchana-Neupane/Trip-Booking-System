@@ -7,7 +7,7 @@
                 <h2>Let's Travel Together</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('users.create') }}"> Ragister New User</a>
+                <a class="btn btn-success" href="{{ route('users.create') }}"> Register New User</a>
             </div>
         </div>
     </div>
@@ -23,8 +23,7 @@
             <th>No</th>
             <th>Name</th>
             <th>Email</th>
-            <th>Password</th>
-            <th>Usertypes_id</th>
+            <th>Usertypes</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($users as $key => $user)
@@ -33,8 +32,7 @@
             
             <td>{{ $user->name }}</td>
             <td>{{ $user->email }}</td>
-            <td>{{ $user->password }}</td>
-            <td>{{ $user->Usertypes_id }}</td>
+            <td>{{ $user->user_types_id }}</td>
             <td>
                 <form action="{{ route('users.destroy',$user->id) }}" method="POST">
      

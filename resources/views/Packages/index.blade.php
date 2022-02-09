@@ -26,8 +26,8 @@
             <th>Price</th>
             <th>Availability</th>
             <th>Duration</th>
-            <th>guides_id</th>
-            <th>vehicles_id</th>
+            <th>Guides</th>
+            <th>Vehicles</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($packages as $package)

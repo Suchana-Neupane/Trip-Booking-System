@@ -100,7 +100,7 @@ class VisitorController extends Controller
             'vehicles_id'=>'required',
             'packages_id'=>'required'
         ]);
-        Visitor::update($request->all());
+        $visitor->update($request->all());
         return redirect()->route('visitors.index') 
                          ->with('success','Visitor is added successfully.');
     }

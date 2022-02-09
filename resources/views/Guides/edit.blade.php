@@ -28,44 +28,44 @@
         @method('PUT')
      
          <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-sm-6">
                 <div class="form-group">
                     <strong>Name:</strong>
                     <input type="text" name="name" value="{{ $guide->name }}" class="form-control" placeholder="Name">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-sm-6">
                 <div class="form-group">
                     <strong>Email:</strong>
-                    <input type="email" class="form-control"  name="email" placeholder="Email"{{ $guide->email }}>
+                    <input type="email" class="form-control"  name="email" placeholder="Email" value="{{ $guide->email }}">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-sm-6">
                 <div class="form-group">
-                    <strong>password:</strong>
-                    <input type="password" class="form-control"  name="password" placeholder="Password"{{ $guide->password }}>
+                    <strong>Password:</strong>
+                    <input type="password" class="form-control"  name="password" placeholder="Password" value="{{ $guide->password }}">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-sm-6">
                 <div class="form-group">
-                    <strong>primarycontact:</strong>
-                    <input type="number" class="form-control"  name="primarycontact" placeholder="primarycontact"{{ $guide->primarycontact }}>
+                    <strong>Primarycontact:</strong>
+                    <input type="number" class="form-control"  name="primarycontact" placeholder="Primarycontact" value="{{ $guide->primarycontact }}">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-sm-6">
                 <div class="form-group">
-                    <strong>secondarycontact:</strong>
-                    <input type="number" class="form-control" name="secondarycontact" placeholder="secondarycontact"{{ $guide->secondarycontact }}>
+                    <strong>Secondarycontact:</strong>
+                    <input type="number" class="form-control" name="secondarycontact" placeholder="Secondarycontact" value="{{ $guide->secondarycontact }}">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-sm-6">
                 <div class="form-group">
                     <strong>Image:</strong>
-                    <input type="file" name="image" class="form-control" placeholder="image">
+                    <input type="file" name="image" class="form-control" placeholder="Image">
                     
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-left">
               <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </div>

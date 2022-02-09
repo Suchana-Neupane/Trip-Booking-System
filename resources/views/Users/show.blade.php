@@ -33,8 +33,8 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Usertypes_id:</strong>
-                {{ $user->Usertypes_id }}
+                <strong>Usertypes:</strong>
+                {{ $user->user_types_id }}
             </div>
         </div>
     </div>

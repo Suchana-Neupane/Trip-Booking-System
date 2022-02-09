@@ -28,41 +28,41 @@
         @method('PUT')
      
          <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-sm-6">
                 <div class="form-group">
                     <strong>Vehicleno:</strong>
                     <input type="number" name="vehicleno" value="{{ $vehicle->vehicleno }}" class="form-control" placeholder="Vehicleno">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-sm-6">
                 <div class="form-group">
                     <strong>Vehicletypes:</strong>
-                    <textarea class="form-control" name="vehicletypes" placeholder="Vehicletypes">{{ $vehicle->vehicletypes }}</textarea>
+                    <input type="text" class="form-control" name="vehicletypes" placeholder="Vehicletypes" value="{{ $vehicle->vehicletypes }}">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-sm-6">
                 <div class="form-group">
                     <strong>Availability:</strong>
-                    <textarea class="form-control"  name="availability" placeholder="Availabilty">{{ $vehicle->availability }}</textarea>
+                    <input type="text" class="form-control"  name="availability" placeholder="Availabilty" value="{{ $vehicle->availability }}">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-sm-6">
                 <div class="form-group">
                     <strong>Capacity:</strong>
-                    <textarea class="form-control" name="capacity" placeholder="capacity">{{ $vehicle->capacity }}</textarea>
+                    <input type="text" class="form-control" name="capacity" placeholder="Capacity" value="{{ $vehicle->capacity }}">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-sm-6">
                 <div class="form-group">
                     <strong>Guides:</strong>
-                    <select class="form-control" name="guides_id" placeholder="guides_id">{{ $vehicle->guides_id }}>
+                    <select class="form-control" name="guides_id" placeholder="guides_id" >
                     @foreach($ids as $guides)
                     <option value="{{$guides->id}}" >{{$guides->name}}</option>
                 @endforeach
                 </select>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-left">
               <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </div>

@@ -88,7 +88,7 @@ class VehicleController extends Controller
             'capacity' =>'required',
             'guides_id' =>'required' 
         ]);
-        Vehicle::update($request->all());
+        $vehicle->update($request->all());
 
         return redirect()->route('vehicles.index') 
                         ->with('success','Vehicle updated successfully.'); //

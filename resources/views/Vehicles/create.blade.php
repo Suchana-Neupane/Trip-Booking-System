@@ -26,45 +26,46 @@
 <form action="{{ route('vehicles.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
     
-     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group ">
-                <strong>Vehicleno:</strong>
-                <input type="number" name="vehicleno" class="form-control" placeholder="vehicleno">
+    <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <strong>Vehicleno:</strong>
+                    <input type="number" name="vehicleno" class="form-control" placeholder="Vehicleno">
+                </div>
             </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Vehicletypes:</strong>
-                <input type="text" class="form-control" name="vehicletypes" placeholder="vehicletypes">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <strong>Vehicletypes:</strong>
+                    <input type="text" class="form-control" name="vehicletypes" placeholder="Vehicletypes">
+                    
+                </div>
             </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Availabiliy:</strong>
-                <input type="text" class="form-control" name="availability" placeholder="availability">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <strong>Availability:</strong>
+                    <input type="text" class="form-control"  name="availability" placeholder="Availabilty">
+                </div>
             </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>capacity:</strong>
-                <input type="text" class="form-control" name="capacity" placeholder="capacity">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <strong>Capacity:</strong>
+                    <input type="text" class="form-control" name="capacity" placeholder="Capacity">
+                </div>
             </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Guides:</strong>
-                <select type ="text" class="form-control" name="guides_id" placeholder="guides_id">
-                @foreach($ids as $guides)
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <strong>Guides:</strong>
+                    <select class="form-control" name="guides_id" placeholder="guides_id">
+                    @foreach($ids as $guides)
                     <option value="{{$guides->id}}" >{{$guides->name}}</option>
                 @endforeach
                 </select>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 text-left">
+              <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-    </div>
      
-</form>
+    </form>
 @endsection

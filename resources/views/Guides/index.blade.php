@@ -24,7 +24,6 @@
             <th>Image</th>
             <th>Name</th>
             <th>Email</th>
-            <th>Password</th>
             <th>Primarycontact</th>
             <th>Secondarycontact</th>            
             <th width="280px">Action</th>
@@ -37,7 +36,6 @@
             <td><img src="/image/{{ $guide->image }}" width="100px"></td>
             <td>{{ $guide->name }}</td>
             <td>{{ $guide->email }}</td>
-            <td>{{$guide->password}}</td>
             <td>{{$guide->primarycontact}}</td>
             <td>{{$guide->secondarycontact}}</td>
             <td>

@@ -25,9 +25,9 @@
             <th>Address</th>
             <th>Primarycontact</th>
             <th>Secondarycontact</th>
-            <th>guides_id</th>
-            <th>vehicles_id</th>
-            <th>packages_id</th>
+            <th>Guides</th>
+            <th>Vehicles</th>
+            <th>Packages</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($visitors as $key => $visitor)
