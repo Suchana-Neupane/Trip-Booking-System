@@ -36,7 +36,7 @@
             <td>{{ $vehicle->vehicletypes }}</td>
             <td>{{ $vehicle->availability }}</td>
             <td>{{ $vehicle->capacity }}</td>
-            <td>{{ $vehicle->guides_id }}</td>
+            <td>{{ $vehicle->guides->name }}</td>
             <td>
                 <form action="{{ route('vehicles.destroy',$vehicle->id) }}" method="POST">
      

@@ -40,19 +40,19 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Guides_id:</strong>
-                {{ $visitor->guides_id }}
+                {{ $visitor->guides->name }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Vehicles_id:</strong>
-                {{ $visitor->vehicles_id }}
+                {{ $visitor->vehicles->vehicleno }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Packages_id:</strong>
-                {{ $visitor->packages_id }}
+                {{ $visitor->packages->name }}
             </div>
         </div>
     </div>

@@ -38,9 +38,9 @@
             <td>{{ $visitor->address }}</td>
             <td>{{ $visitor->primarycontact }}</td>
             <td>{{ $visitor->secondarycontact }}</td>
-            <td>{{ $visitor->guides_id }}</td>
-            <td>{{ $visitor->vehicles_id }}</td>
-            <td>{{ $visitor->packages_id }}</td>
+            <td>{{ $visitor->guides->name }}</td>
+            <td>{{ $visitor->vehicles->vehicleno }}</td>
+            <td>{{ $visitor->packages->name }}</td>
             <td>
                 <form action="{{ route('visitors.destroy',$visitor->id) }}" method="POST">
      
