@@ -27,33 +27,33 @@
     @csrf
     
      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-sm-6">
             <div class="form-group">
                 <strong>Name:</strong>
                 <input type="text" name="name" class="form-control" placeholder="Name">
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-sm-6">
             <div class="form-group">
                 <strong>Address:</strong>
-                <textarea class="form-control" style="height:150px" name="address" placeholder="Address"></textarea>
+                <input type="text" class="form-control"  name="address" placeholder="Address">
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-sm-6">
             <div class="form-group">
                 <strong>Primarycontact:</strong>
-                <textarea class="form-control"  name="primarycontact" placeholder="Priarycontact"></textarea>
+                <input type="number" class="form-control"  name="primarycontact" placeholder="Primarycontact">
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-sm-6">
             <div class="form-group">
                 <strong>Secondarycontact:</strong>
-                <textarea class="form-control"  name="secondarycontact" placeholder="Secondarycontact"></textarea>
+                <input type="number" class="form-control"  name="secondarycontact" placeholder="Secondarycontact">
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-sm-6">
             <div class="form-group">
-                <strong>Guides_id:</strong>
+                <strong>Guides:</strong>
                 <select class="form-control"  name="guides_id" placeholder="Guides_id">
                 @foreach($ids as $guides)
                     <option value="{{$guides->id}}" >{{$guides->name}}</option>
@@ -61,27 +61,27 @@
                 </select>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-sm-6">
             <div class="form-group">
-                <strong>Vehicles_id:</strong>
+                <strong>Vehicles:</strong>
                 <select class="form-control"  name="vehicles_id" placeholder="Vehicles_id">
                 @foreach($lists as $vehicles)
-                    <option value="{{$vehicles->id}}" >{{$vehicles->vehicleno}}</option>
+                    <option value="{{$vehicles->id}}">{{$vehicles->vehicleno}}</option>
                 @endforeach
                 </select>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-sm-6">
             <div class="form-group">
-                <strong>Packages_id:</strong>
+                <strong>Packages:</strong>
                 <select class="form-control"  name="packages_id" placeholder="Packages_id">
                 @foreach($datas as $packages)
-                    <option value="{{$packages->id}}" >{{$packages->name}}</option>
+                    <option value="{{$packages->id}}">{{$packages->name}}</option>
                 @endforeach
                 </select>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+        <div class="col-xs-12 col-sm-12 col-md-12 text-left">
                 <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </div>

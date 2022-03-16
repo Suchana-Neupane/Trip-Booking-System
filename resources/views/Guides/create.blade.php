@@ -27,43 +27,43 @@
     @csrf
     
      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-sm-6">
             <div class="form-group">
                 <strong>Name:</strong>
                 <input type="text" name="name" class="form-control" placeholder="Name">
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-sm-6">
             <div class="form-group">
                 <strong>Email:</strong>
-                <input type="text" class="form-control" name="email" placeholder="email">
+                <input type="email" class="form-control" name="email" placeholder="Email">
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-sm-6">
             <div class="form-group">
-                <strong>password:</strong>
-                <input type="text" class="form-control" name="password" placeholder="password">
+                <strong>Password:</strong>
+                <input type="password" class="form-control" name="password" placeholder="Password">
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-sm-6">
             <div class="form-group">
-                <strong>primarycontact:</strong>
-                <input type="text" class="form-control" name="primarycontact" placeholder="primarycontact">
+                <strong>Primarycontact:</strong>
+                <input type="number" class="form-control" name="primarycontact" placeholder="Primarycontact">
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-sm-6">
             <div class="form-group">
-                <strong>seconarycontact:</strong>
-                <input type ="text" class="form-control" name="secondarycontact" placeholder="secondarycontact">
+                <strong>Seconarycontact:</strong>
+                <input type ="number" class="form-control" name="secondarycontact" placeholder="Secondarycontact">
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-sm-6">
             <div class="form-group">
                 <strong>Image:</strong>
-                <input type="file" name="image" class="form-control" placeholder="image">
+                <input type="file" name="image" class="form-control" placeholder="Image">
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+        <div class="col-xs-12 col-sm-12 col-md-12 text-left">
                 <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </div>

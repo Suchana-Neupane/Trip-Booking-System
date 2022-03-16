@@ -40,7 +40,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Image:</strong>
-                <img src="/image/{{ $guide->image }}" width="500px">
+                <img src="/image/{{ $guide->image }}" width="100px">
             </div>
         </div>
     </div>

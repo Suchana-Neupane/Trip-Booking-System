@@ -30,7 +30,7 @@ class UserController extends Controller
     {
         $types=User_type::get();
        
-        return view('users.ragister',compact('types'));  //
+        return view('users.register',compact('types'));  //
     }
 
     /**
@@ -45,7 +45,7 @@ class UserController extends Controller
             'name' => 'required',
             'email' => 'required',
             'password' => 'required',
-            'user_types_id' => ''
+            'user_types_id' => 'required'
         ]);
     
         User::create($request->all());
@@ -73,7 +73,8 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-      return view ('users.edit' , compact('user'));  //
+      $types=User_type::get();
+      return view ('users.edit' , compact('user','types'));  //
     }
 
     /**
@@ -90,12 +91,12 @@ class UserController extends Controller
             'name' => 'required',
             'email' => 'required',
             'password' => 'required',
-            'user_types_id' => ''
+            'user_types_id' => 'required'
         ]);
     
-        User::update($request->all());
+        $user->update($request->all());
      
-        return redirect()->route('users.update')
+        return redirect()->route('users.index')
                         ->with('success','User updated successfully.');  //
     }
 

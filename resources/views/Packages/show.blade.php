@@ -45,14 +45,14 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Guides_id:</strong>
-                {{ $package->guides_id }}
+                <strong>Guides:</strong>
+                {{ $package->guides->name }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Vehicles_id:</strong>
-                {{ $package->vehicles_id }}
+                <strong>Vehicle:</strong>
+                {{ $package->vehicles->vehicleno }}
             </div>
         </div>
     </div>

@@ -25,7 +25,7 @@
             <th>Vehicletypes</th>
             <th>Availability</th>
             <th>Capacity</th>
-            <th>guides_id</th>
+            <th>guides</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($vehicles as $key => $vehicle)
@@ -36,7 +36,7 @@
             <td>{{ $vehicle->vehicletypes }}</td>
             <td>{{ $vehicle->availability }}</td>
             <td>{{ $vehicle->capacity }}</td>
-            <td>{{ $vehicle->guides_id }}</td>
+            <td>{{ $vehicle->guides->name }}</td>
             <td>
                 <form action="{{ route('vehicles.destroy',$vehicle->id) }}" method="POST">
      

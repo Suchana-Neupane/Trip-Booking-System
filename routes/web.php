@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,26 +11,22 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
-/*Routes of Users*/
-Route::resource('users', App\Http\Controllers\UserController::class);
+require __DIR__.'/auth.php';
 
-
-//Routes of Guides
-Route::resource('guides',App\Http\Controllers\GuideController::class);
-
-//Routes of Vehicles
-Route::resource('vehicles',App\Http\Controllers\VehicleController::class);
-
-//Routes of packages
-Route::resource('/packages', App\Http\Controllers\PackageController::class );
-
-//Routes of visitors
-Route::resource('/visitors',App\Http\Controllers\VisitorController::class);
-
-//Routes of bookings
-Route::resource('/bookings',App\Http\Controllers\BookingController::class);
+//Admin
+Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
+    Route::namespace('Auth')->group(function(){
+//login route
+        Route::get('login','AuthenticatedSessionController@create')->name ('login');
+        Route::post('login','AuthenticatedSessionController@store')->name ('adminlogin');
+    });
+});

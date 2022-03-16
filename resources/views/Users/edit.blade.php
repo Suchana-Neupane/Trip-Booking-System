@@ -27,30 +27,26 @@
         @csrf
         @Method('PUT')
          <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
+            <div class="col-sm-6 form-group">
                     <strong>Name:</strong>
                     <input type="text" name="name" value="{{ $user->name }}" class="form-control" placeholder="Name">
-                </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
+            <div class="col-sm-6 form-group">
                     <strong>Email:</strong>
-                    <input type="text" name="email" value="{{ $user->email }}" class="form-control" placeholder="Email">
-                </div>
+                    <input type="email" name="email" value="{{ $user->email }}" class="form-control" placeholder="Email">
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
+            <div class="col-sm-6 form-group">
                     <strong>Password:</strong>
-                    <input type="text" name="password"  class="form-control" placeholder="Password" value={{ $user->password }}>
-                </div>
+                    <input type="password" name="password"  class="form-control" placeholder="Password" value={{ $user->password }}>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Usertypes_id:</strong>
-                    <input type="text" name="Usertypes_id"  class="form-control" placeholder="Usertypes_id" value={{ $user->usertypes_id }}>
+            <div class="col-sm-6 form-group">
+                    <strong>Usertypes:</strong>
+                    <select type="text" name="user_types_id"  class="form-control" placeholder="Usertypes_id" value={{ $user->user_types_id }}>
+                    @foreach($types as $usertypes)
+                    <option value="{{$usertypes->id}}"> {{$usertypes->name}}</option>
+                    @endforeach
+                    </select>
                 </div>
-            </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
               <button type="submit" class="btn btn-primary">Submit</button>
             </div>

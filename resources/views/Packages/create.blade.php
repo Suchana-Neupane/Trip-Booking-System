@@ -27,10 +27,48 @@
     @csrf
     
      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-sm-6">
             <div class="form-group">
                 <strong>Name:</strong>
                 <input type="text" name="name" class="form-control" placeholder="Name">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <strong>Price:</strong>
+                <input type ="text" class="form-control"  name="price" placeholder="Price">
+        </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <strong>Availability:</strong>
+                <input type ="text" class="form-control"  name="availability" placeholder="Availability">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <strong>Duration:</strong>
+                <input type ="text" class="form-control"  name="duration" placeholder="Duration">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <strong>Guides:</strong>
+                <select class="form-control"  name="guides_id" placeholder="Guides_id">
+                @foreach($ids as $guides)
+                    <option value="{{$guides->id}}" >{{$guides->name}}</option>
+                @endforeach
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <strong>Vehicles:</strong>
+                <select class="form-control"  name="vehicles_id" placeholder="Vehicles_id">
+                @foreach($lists as $vehicles)
+                    <option value="{{$vehicles->id}}" >{{$vehicles->vehicleno}}</option>
+                @endforeach
+                </select>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -39,47 +77,10 @@
                 <textarea class="form-control" style="height:150px" name="details" placeholder="Details"></textarea>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Price:</strong>
-                <textarea class="form-control"  name="price" placeholder="Price"></textarea>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Availability:</strong>
-                <textarea class="form-control"  name="availability" placeholder="Availability"></textarea>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Duration:</strong>
-                <textarea class="form-control"  name="duration" placeholder="Duration"></textarea>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Guides_id:</strong>
-                <select class="form-control"  name="guides_id" placeholder="Guides_id">
-                @foreach($ids as $guides)
-                    <option value="{{$guides->id}}" >{{$guides->name}}</option>
-                @endforeach
-                </select>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Vehicles_id:</strong>
-                <select class="form-control"  name="vehicles_id" placeholder="Vehicles_id">
-                @foreach($lists as $vehicles)
-                    <option value="{{$vehicles->id}}" >{{$vehicles->vehicleno}}</option>
-                @endforeach
-                </select>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+        <div class="col-xs-12 col-sm-12 col-md-12 text-left">
                 <button type="submit" class="btn btn-primary">Submit</button>
         </div>
+        
     </div>
      
 </form>

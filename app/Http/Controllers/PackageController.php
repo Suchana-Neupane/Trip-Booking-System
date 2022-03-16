@@ -78,7 +78,9 @@ class PackageController extends Controller
      */
     public function edit(Package $package)
     {
-        return view('packages.edit',compact('package'));   //
+        $ids=Guide::get();
+        $lists=Vehicle::get(); 
+        return view('packages.edit',compact('package','ids','lists'));   //
     }
 
     /**

@@ -25,9 +25,9 @@
             <th>Address</th>
             <th>Primarycontact</th>
             <th>Secondarycontact</th>
-            <th>guides_id</th>
-            <th>vehicles_id</th>
-            <th>packages_id</th>
+            <th>Guides</th>
+            <th>Vehicles</th>
+            <th>Packages</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($visitors as $key => $visitor)
@@ -38,9 +38,9 @@
             <td>{{ $visitor->address }}</td>
             <td>{{ $visitor->primarycontact }}</td>
             <td>{{ $visitor->secondarycontact }}</td>
-            <td>{{ $visitor->guides_id }}</td>
-            <td>{{ $visitor->vehicles_id }}</td>
-            <td>{{ $visitor->packages_id }}</td>
+            <td>{{ $visitor->guides->name }}</td>
+            <td>{{ $visitor->vehicles->vehicleno }}</td>
+            <td>{{ $visitor->packages->name }}</td>
             <td>
                 <form action="{{ route('visitors.destroy',$visitor->id) }}" method="POST">
      

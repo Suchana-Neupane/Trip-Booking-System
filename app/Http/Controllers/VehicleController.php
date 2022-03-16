@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Guide;
 use App\Models\Vehicle;
 use Illuminate\Http\Request;
 
@@ -25,7 +25,8 @@ class VehicleController extends Controller
      */
     public function create()
     {
-       return view('vehicles.create'); //
+        $ids=Guide::get();
+       return view('vehicles.create',compact('ids')); //
     }
 
     /**
@@ -67,7 +68,8 @@ class VehicleController extends Controller
      */
     public function edit(Vehicle $vehicle)
     {
-       return view('vehicles.edit', compact('vehicle')); //
+        $ids=Guide::get();
+       return view('vehicles.edit', compact('vehicle','ids')); //
     }
 
     /**
@@ -86,7 +88,7 @@ class VehicleController extends Controller
             'capacity' =>'required',
             'guides_id' =>'required' 
         ]);
-        Vehicle::update($request->all());
+        $vehicle->update($request->all());
 
         return redirect()->route('vehicles.index') 
                         ->with('success','Vehicle updated successfully.'); //
